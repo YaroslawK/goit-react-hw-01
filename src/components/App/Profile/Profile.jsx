@@ -1,29 +1,31 @@
 /* eslint-disable no-irregular-whitespace */
+import css from './Profile.module.css';
 
 function Profile(props) {
   return <div>
-  <div>
-    <img
+  <div className={css.profileContainer}>
+      <img
+      className={css.profileImg}
       src={props.image}
       alt="User avatar"
     />
-    <p>{props.name}</p>
-    <p>{props.tag}</p>
-    <p>{props.location}</p>
+    <p className={css.profileName}>{props.name}</p>
+    <p className={css.profileName}>@{props.tag}</p>
+    <p className={css.profileName}>{props.location}</p>
   </div>
 
-  <ul>
+  <ul className={css.profileList}>
     <li>
-      <span>Followers</span>
-      <span>{props.stats.followers}</span>
+      <div className={css.profileItem}>Followers</div>
+      <div>{props.stats.followers}</div>
     </li>
     <li>
-      <span>Views</span>
-      <span>{props.stats.views}</span>
+      <div className={css.profileItem}>Views</div>
+      <div className={css.profileItem}>{props.stats.views}</div>
     </li>
     <li>
-      <span>Likes</span>
-      <span>{props.stats.likes}</span>
+      <div className={css.profileItem}> Likes</div>
+      <div>{props.stats.likes}</div>
     </li>
   </ul>
 </div>
