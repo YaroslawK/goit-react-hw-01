@@ -1,8 +1,8 @@
 import FriendListItem from "./FriendListItem/FriendListItem";
-import friends from '/src/friends';
 
 
-function FriendList() {
+
+function FriendList({ friends }) {
    return <div>
        {friends.map((el) => {
         
